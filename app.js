@@ -12,10 +12,7 @@ const port = process.env.PORT ;
 
 
 // ✅ CORS should be applied to Express, not ApolloServer
-app.use(cors({
-  origin: "https://social-media-frontend-v07m.onrender.com",
-  credentials: true,
-}));
+app.use(cors());
 
 async function startServer() {
   const server = new ApolloServer({
