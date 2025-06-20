@@ -20,7 +20,7 @@ const resolvers = {
 
   const hashedPassword = await bcrypt.hash(password, 10);
   const otp = Math.floor(100000 + Math.random() * 900000);
-  // sendOtpMail(email, otp);
+  sendOtpMail(email, otp);
   const now = new Date();
   const expiry = new Date(now.getTime() + 2 * 60 * 1000); // 2 min
 
